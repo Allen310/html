@@ -1,0 +1,697 @@
+<!DOCTYPE htnl>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>百度一下，你就知道</title>
+        <!--设置页面栏图标-->
+        <link rel="shortcut icon" href="img/7.png">
+        <style>
+        body{
+            -moz-user-select: none;
+        }
+        .container{
+            width: 88%;
+            margin: 0 auto;
+        }
+            nav {
+                /*设置距离上边距的距离*/
+                margin-top: 20px;
+                /*设置水平方式 向右*/
+                text-align: right;
+                position: relative;
+            }
+            nav>div{
+                /*设置右边距*/
+                margin-right: 12px;
+                /*设置在一行显示*/
+                display: inline-block;
+            }
+            nav div a{
+                /*设置文字为粗体*/
+                font-weight: bold;
+                /*字体大小*/
+                font-size: 13px;
+                /*设置字体颜色*/
+                color:#333333;
+            }
+            /*设置鼠标触摸*/
+            nav div a:hover{
+                color:blue;
+            }
+            nav .more-goods{
+                /*设置在同一行显示*/
+                display: inline-block;
+                /*设置宽度*/
+                width: 64px;
+                /*设置高度*/
+                height: 20px;
+                /*设置背景颜色*/
+                background-color: #3388FF;
+                /*设置字体颜色*/
+                font-size: 13px;
+                /*设置文字剧中*/
+                text-align: center;
+            }
+            nav .more-goods a{
+                color: white;
+            }
+
+            nav #list{
+                width: 66px;
+                height: 100px;
+                font-size: 12px;
+                /*添加边框*/
+                border: 1px solid lightgray;
+                text-align: center;
+                line-height: 25px;
+                /*添加阴影*/
+                box-shadow: 0px 0px 1px gray;
+                /*设置光标为手型*/
+                cursor: pointer;
+                /*绝对定位*/
+                position: absolute;
+                right: 60px;
+                top: 30px;
+                /*设置隐藏*/
+                display: none;
+            }
+            nav #list span {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-image: url(img/5.png);
+                background-position: -912px -146px;
+                position: absolute;
+                top: -10px;
+                left: 26px;
+                /*padding-top: 5px;*/
+            }
+            nav #list div:hover{
+                background-color: #3388FF;
+                color: white;
+            }
+            .logo{
+                text-align: center;
+            }
+
+            .logo img{
+                width:260px;
+                height: 120px; 
+            }
+
+            form div {
+                width: 642px;
+                /*display: inline-block;*/
+                margin: 0 auto;
+                position: relative;
+            }
+            form div input {
+                width: 540px;
+                height: 35px;
+                border: 1px solid lightgray;
+                padding-right: 40px;
+            }
+
+            form div button {
+                height: 37px;
+                width: 92px;
+                border: 0;
+                background-color: #3388FF;
+                color: white;
+                margin-left: -5px;
+            }
+            form div input::focus{
+                border: 1px solid #3388FF
+            }
+            footer {
+                margin-top: 30vh;
+                text-align: center;
+                font-size: 12px;
+                color: gray;
+            }
+            footer .phone{
+                margin-top: 4px;
+            }
+           footer .margin-t{
+               margin-top: 10px;
+           }
+           footer a{
+               color: gray;
+           }
+           footer .margin-l a , 
+           footer .margin-t .police-margin{
+               margin-left: 8px;
+           }
+           footer .margin-t .address,
+            footer .margin-t .police{
+               display: inline-block;
+               width: 15px;
+               height: 15px;
+               background-image:url(img/5.png); 
+           }
+           footer .margin-t .address{
+               background-position: -600px -95px;
+           }
+            footer .margin-t .police{
+                background-position: -622px -95px;
+            }
+            form div span{
+               display: inline-block;
+               width: 18px;
+               height: 18px;
+               background-image:url(img/3.png); 
+               position: absolute;
+               right: 110px;
+               top: 11px;
+               cursor: pointer;
+            }
+            aside{
+                padding-top: 23px;
+                width: 84px;
+                height: 930px;
+                background-color: #F9F9F9;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 14px;
+                text-align: center;
+                display: none;
+            }
+            aside .light-box{
+                cursor: pointer;
+                width: 76%;
+                margin: 0 auto;
+                /*height: 200px;
+                border: 1px solid;*/
+            }
+            aside .light-box>div{
+                padding: 8px 0;
+                border-top: 1px solid lightgray;
+            }
+            aside .light-box>div:first-child{
+                margin-top: 12px;
+            }
+
+            aside .light-box>div:last-child{
+                border-bottom: 1px solid lightgray;
+                margin-bottom: 12px;
+            }
+
+            aside a{
+                font-size: 13px;
+                color: gray;
+            }
+            aside .light-box .music,
+            aside .light-box .image,
+            aside .light-box .know,
+            aside .light-box .book,
+            aside .light-box .wind{
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                background-image: url(img/1.png);
+            }
+             aside .light-box .music{
+                 width: 42px;
+                 background-position: -72px 0;
+             }
+             aside .light-box .image{
+                 background-position: -113px 0;
+             }
+             aside .light-box .know{
+                 background-position: -36px 0;
+             }
+             aside .light-box .book{
+                  background-position: -149px 0;
+             }
+             aside .light-box .wind{
+                 background-position: -185px 0;
+             }
+             main{
+                 display: none;
+             }
+             main .modal{
+                 width: 100%;
+                 height: 930px;
+                 background-color: black;
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 opacity: 0.2;
+             }
+             main .form-box{
+                 width: 393px;
+                 height: 448px;
+                 background-color: white;
+                 position: absolute;
+                 top: calc((100% - 448px) / 2);
+                 left: calc((100% - 393px) / 2);
+                  
+
+             }
+             main .form-box h3{
+                 background-color: #F7F7F7;
+                 margin: 0;
+                 padding: 10px 20px;
+             }
+             main .form-box h3 .baidu-logo{
+                 width: 25px;
+                 height: 30px;
+                 display: inline-block;
+                 background-image: url(img/7.png);
+                 vertical-align: bottom;
+             }
+             main .form-box h3 #close{
+                 color: #3388FF;
+                display: inline-block;
+                border: 1px solid #3388FF;
+                border-radius: 50%;
+                padding: 1px 6px;
+                position: absolute;
+                right: 20px;
+                font-size: 15px;
+                top: 15px;
+                cursor: pointer;
+             }
+             main .form-box h3 #close:hover{
+                 color: red;
+                 border-color: red;
+             }
+             main .form-box .message-signin{
+                 font-size: 12px;
+                 text-align: right;
+                 margin: 20px 0;
+             }
+             main .form-box .message-signin span:nth-child(1){
+                 display: inline-block;
+                 width: 10px;
+                 height: 15px;
+                 background-image: url(img/6.png);
+                 vertical-align: middle;
+             }
+             main .form-box .message-signin span:nth-child(2):hover{
+                 color: #3388FF;
+                 text-decoration: underline;
+                 cursor: pointer;
+             }
+             main .form-box .container .first-input{
+                 position: relative;
+                 margin-top: 20px;
+             }
+             main .form-box .container .first-input span{
+                 display: inline-block;
+                 width: 25px;
+                 height: 25px;
+                 background-image: url(img/8.png);
+                 position: absolute;
+                 top: 10px;
+                 left: 3px;
+             }
+             main .form-box .container .one span{
+                 background-position: 0 -69px;
+             }
+             main .form-box .container .two span{
+                 background-position: 0 -148px;
+             }
+             main .form-box .container .first-input input{
+                 width: calc(100%);
+                 /*width: 100%;*/
+                 height: 40px;
+                 border: 1px solid lightgray;
+                 padding-left: 31px;
+             }
+             main .form-box .container .first-input input:focus{
+                 border-color:#3388FF; 
+             }
+             main .form-box .container .next-signin{
+                 font-size: 12px;
+                 margin-bottom: 20px;
+                 margin-top: 20px;
+             }
+              main .form-box .container .next-signin span{
+                  float: right;
+                  color: #3388FF;
+              }
+               main .form-box .container .next-signin span:hover,
+                main .form-box .container .register-now span:hover,
+                .reverse-face span:hover{
+                   text-decoration: underline;
+                   cursor: pointer;
+               }
+               main .form-box .container .next-signin input{
+                   vertical-align: -2px;
+               }
+               main .form-box .container .submit-button input{
+                   width: 100%;
+                   height: 38px;
+                   border: 0;
+                   background-color: #3388FF;
+                   color: white;
+               }
+               main .form-box .container .register-now{
+                   text-align: right;
+                   font-size: 12px;
+                   margin: 20px 0;
+               }
+                main .form-box .container .register-now span{
+                    color: #3388FF;       
+               }
+               hr{
+                   border-top: 0;
+                   width: 114%;
+                   margin-left: -24px;
+               }
+               main .form-box .container .other-signin{
+                   font-size: 12px;
+               }
+               main .form-box .container .other-signin span,
+               #toggle-modal{
+                   display: inline-block;
+                   width: 25px;
+                   height: 25px;
+                   background-image: url(img/9.png);
+               }
+                main .form-box .container .other-signin span:nth-of-type(1){
+                    background-position: -63px 0;
+                }
+                main .form-box .container .other-signin span:nth-of-type(2){
+                    background-position: -89px 0;
+                    margin-left: 10px;
+                }
+                #toggle-modal{
+                    position: absolute;
+                    right: 0;           
+                    bottom: 0;
+                    width: 40px;
+                    height: 40px;
+                    background-position: -46px -90px;
+                }
+                .reverse-face{
+                    display: none;
+                    text-align: center;
+                    margin-top: 10vh;
+                }
+                .reverse-face p{
+                    font-size: 12px;
+                }
+                .reverse-face img{
+                    width: 100px;
+                    height: 100px;
+                }
+               .reverse-face div{
+                   padding: 5px;
+                   border: 1px solid;
+                   width: 100px;
+                   height: 100px;
+                   margin: 0 auto;
+               }
+               .reverse-face span{
+                   color: #3388FF;
+               }
+        </style>
+         
+    </head>
+    <body>
+        <nav>
+            <!--a 标签是跳转网站的，href是网址-->
+            <div> <a href="https://www.nuomi.com/?cid=002540">糯米</a> </div>
+            <div> <a href="http://news.baidu.com/">新闻</a> </div>
+            <div> <a href="https://www.hao123.com/?tn=97103350_hao_pg">hao123</a> </div>
+            <div> <a href="http://map.baidu.com/">地图</a> </div>
+            <div> <a href="http://v.baidu.com/">视频</a> </div>
+            <div> <a href="https://tieba.baidu.com/index.html">贴吧</a> </div>
+            <div> <a href="#" id="open-modal">登录</a> </div>
+            <div id="show-list"> <a href="#">设置</a> </div>
+            <section class="more-goods"> <a href="#">更多产品</a></section>
+            <section id="list">
+                <span> </span>
+                <div>搜索设置</div>
+                <div>高级搜索</div>
+                <div>关闭预测</div>
+                <div>搜索历史</div>    
+            </section> 
+            
+        </nav>
+        <p class="logo">
+            <img src="img/2.png" alt="百度logo">
+        </p>
+
+        <form action="#">
+            <div>
+                <input type="text" >
+                <span id="camera"></span>
+                <button>百度一下</button>    
+            </div>
+            
+        </form>
+        
+        <footer>
+            <img src="img/4.png" alt="百度二维码">
+            <div class="phone"><b>手机百度</b></div>
+            <div class="margin-t margin-l">   
+                <a href="#">把百度设为首页</a>
+                <a href="#">关于百度</a>
+                <a href="#">About Baidu</a>
+                <a href="#">百度推广</a>
+            </div>
+            <div class="margin-t">
+                <span >
+                    &copy;2017 Baidu
+                    <a href="#">使用百度前须知</a>
+                    <a href="#">意见反馈</a>
+                    京ICP证030173号
+                </span>
+                <span class="address"></span>
+                <span class="police-margin">
+                    京公网安备11000002000001号
+                </span>
+                <span class="police"></span>
+            </div>
+        </footer>
+        <aside>
+            <div>更多产品</div>
+            <div class="light-box">
+                <div>
+                    <span class="music"> </span>
+                    <div>音乐</div>
+                </div>
+
+                <div>
+                    <span class="image"></span>
+                    <div>图片</div>
+                </div>
+
+                <div>
+                    <span class="know"> </span>
+                    <div>知道</div>
+                </div>
+
+                <div>
+                    <span class="book"> </span>
+                    <div>文库</div>
+                </div>
+
+                <div>
+                    <span class="wind"> </span>
+                    <div>风云榜</div>
+                </div>
+
+            </div>
+            <div>
+                <a href="#">全部产品>></a>
+            </div>
+        </aside>
+        <main>
+            <div class="modal"></div>
+            <div class="form-box">
+                <h3 id="modal-title">
+                    <span class="baidu-logo"></span>
+                    登录百度帐号
+                    <span id="close">X</span>
+                </h3>    
+                <div class="reverse-face">
+                    <h4>手机扫描，安全登录</h4>
+                    <div>
+                        <img src="img/4.png" alt="">
+                    </div>
+                    <p>请使用<span>手机百度app</span>扫描登录</p>
+                </div>
+
+               <div class="container" >
+                    <p class="message-signin">
+                        <span></span>
+                        <span>短信快捷登录</span>
+                    </p>
+
+                    <div class="first-input one">
+                        <span></span>
+                        <input id="user" type="text" placeholder="手机/邮箱/用户名">
+                    </div>
+
+                    <div class="first-input two" >
+                        <span></span>
+                        <input id="password" type="password" placeholder="密码">
+                    </div>
+                    
+                    <div class="next-signin">
+                        <input type="checkbox" id="check">
+                        <label for="check">下次自动登录</label>
+                        <span>登录遇到问题</span>
+                    </div>
+
+                    <div class="submit-button">
+                        <input type="button" value="登录">
+                    </div>
+                    <div class="register-now">
+                        <span>立即注册</span>
+                    </div>
+                    <hr>
+                    <div class="other-signin">
+                        <p>可用以下方式登录</p>
+                        <span></span>
+                        <span></span>
+                    </div>
+               </div>
+                <span id="toggle-modal"></span>
+            </div>   
+        </main>
+        <script>
+            // alert(window.innerHeight)
+            var showList = document.querySelector('#show-list')
+            var list =  document.querySelector('#list')
+            var camera = document.querySelector('#camera')
+            var spans = document.querySelectorAll('aside .light-box>div')
+            var moreGood = document.querySelector('.more-goods')
+            var aside = document.querySelector('aside')
+            var userInput = document.getElementById('user')
+            var passwordInput = document.getElementById('password')
+            var toggleModal = document.getElementById('toggle-modal')
+            var page1 = document.querySelector('.container')
+            var page2 = document.querySelector('.reverse-face')
+            var closeModal = document.getElementById('close')
+            var openModal = document.getElementById('open-modal')
+            var modal = document.querySelector('main')
+            var  modalTitle = document.querySelector('#modal-title')
+            var modalMove = document.querySelector('.form-box')
+            var change = true  
+            
+            closeModal.onmousedown = function(e){
+                e.stopPropagation()
+            }
+            //设置关闭登录事件
+            closeModal.onclick = function(){
+                modal.style.display = 'none'
+            }
+            
+            //设置显示登录事件
+            openModal.onclick = function(){
+                modalMove.style.top = ((window.innerHeight -448)/2)+ 'px';
+                modalMove.style.left = ((window.innerWidth -393)/2)+ 'px';
+                page1.style.display = 'block'
+                modal.style.display = 'block'
+                page2.style.display = 'none'
+            } 
+            //设置二维码和电脑之间的切换事件
+            toggleModal.onclick = function(){
+                if(change){
+                    page1.style.display = 'none'
+                    page2.style.display = 'block'
+                    this.style.backgroundPosition = '0 -90px'//设置显示登录页面
+                    change = false
+                }else{
+                    page1.style.display = 'block'
+                    page2.style.display = 'none'
+                    this.style.backgroundPosition = '-46px -90px'//设置显示二维码页面
+                    change = true
+                }
+            }
+            
+            //用户名设置得到焦点文本框显示蓝色图标
+            userInput.onfocus = function(){
+                this.previousElementSibling.style.backgroundPosition = '0 -108px'
+            }
+            //用户名设置失去焦点文本框显示蓝色图标
+            userInput.onblur = function(){
+                this.previousElementSibling.style.backgroundPosition = '0 -69px'
+            }
+             //密码设置得到焦点文本框显示蓝色图标
+            passwordInput.onfocus = function(){
+                this.previousElementSibling.style.backgroundPosition = '0 -188px'
+            }
+            //密码设置失去焦点文本框显示蓝色图标
+            passwordInput.onblur = function(){
+                this.previousElementSibling.style.backgroundPosition = '0 -148px'
+            }
+            // 设置更多商品显示隐藏
+            moreGood.onmouseenter = function(){
+                aside.style.display='block'
+            }
+             aside.onmouseleave = function(){
+                aside.style.display='none'
+            }
+            //设置鼠标进入显示隐藏下划线
+            for(var i = 0; i < spans.length;i++){
+                spans[i].onmouseenter = function(){
+                    this.children[1].style.textDecoration = 'underline'
+                }
+                spans[i].onmouseleave = function(){
+                    this.children[1].style.textDecoration = 'none'
+                }
+            }
+
+            camera.onmouseenter = function(){
+                this.style.backgroundPosition = ' 0 -20px '
+            }
+             camera.onmouseleave = function(){
+                this.style.backgroundPosition = ' 0 0 ' 
+            }
+            // 设置触摸显示设置页面
+            showList.onmouseenter = function(){
+                list.style.display = 'block'
+            }
+
+            // 设置触摸隐藏设置页面
+            showList.onmouseleave = function(){
+                list.style.display = 'none'
+            }
+
+            // 设置在list列表上显示设置页面
+            list.onmouseenter = function(){
+                list.style.display = 'block'
+            }
+
+            // 设置在list列表上隐藏设置页面
+            list.onmouseleave = function(){
+                list.style.display = 'none'
+            }
+            
+
+            modalTitle.onmousedown = function(event){
+                console.log(event)    
+                var modalX = event.layerX
+                var modalY = event.layerY
+
+                //获取鼠标按下的位置
+                window.onmousemove = function(e){
+                var mouseX = e.clientX
+                var mouseY = e.clientY
+                //console.log("X=" + mouseX +" , " + "Y=" + mouseY  )
+                var top = mouseY - modalY
+                var left = mouseX - modalX
+                top = top < 0 ? 0 : top
+                left = left < 0 ? 0 : left
+                top = top > (window.innerHeight - 448) ? (window.innerHeight - 448) : top
+                left = left > (window.innerWidth - 393) ? (window.innerWidth - 393) : left
+                modalMove.style.top = top + 'px'
+                modalMove.style.left = left + 'px'
+                }    
+            }
+            window.onmouseup = function(){
+                window.onmousemove = function(){}
+            }
+
+        </script>
+    </body>
+    
+</html>
